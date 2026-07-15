@@ -31,12 +31,12 @@ describe("TaskPlanner", () => {
     await user.type(input, "   ");
     await user.click(screen.getByTestId("add-button"));
     expect(screen.queryByText("   ")).not.toBeInTheDocument();
+    expect(screen.getByText("No tasks yet")).toBeInTheDocument();
 
     await user.clear(input);
     await user.click(screen.getByTestId("add-button"));
 
-    const taskContainer = screen.getByTestId("task-list");
-    expect(taskContainer.childElementCount).toBe(0);
+    expect(screen.getByText("No tasks yet")).toBeInTheDocument();
   });
 
   it("deletes a task on X click", async () => {
