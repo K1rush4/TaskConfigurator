@@ -109,9 +109,9 @@ export default function Home() {
                 data-testid={`task-${task.id}`}
                 className="paper-card group relative w-[calc(20%-0.8rem)] rounded-xl p-4 transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
-                <span className="font-display block pr-6 text-base font-semibold tracking-tight text-foreground">
-                  {task.text}
-                </span>
+              <span className="font-display block pr-6 text-base font-semibold tracking-tight text-foreground break-all">
+                {task.text}
+              </span>
                 <button
                   data-testid={`delete-${task.id}`}
                   className="absolute right-1.5 top-1.5 flex size-6 items-center justify-center rounded-full text-muted-foreground/40 opacity-0 transition-all hover:bg-destructive/15 hover:text-destructive group-hover:opacity-100"
